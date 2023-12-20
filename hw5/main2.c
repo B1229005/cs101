@@ -3,19 +3,18 @@
 int main()
 {
     double pi=4.0;
-    long realpi=314159;
     long calcpi=1;
-    int i;
-    float x=1.0;
+    int x;
+    float y=1.0;
     
-    for (i=1; i<=300000 && realpi!=calcpi ; i++)
+    for (x=1; x<=1000000 && (calcpi>3141594 || calcpi<3141590) ; x++)
     {
-        pi = pi-x*4.0/(2*i+1);
-        x = x*(-1);
-        calcpi = (long)(pi*100000);
+        pi = pi-y*4.0/(2*x+1);
+        y = y*(-1);
+        calcpi = (long)(pi*1000000);
     }
     
-    printf("times=%d",i);
+    printf("x=%d \tvalue=%7.5f \n",x,pi);
 
     return 0;
 }
